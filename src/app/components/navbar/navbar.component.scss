@@ -1,0 +1,21 @@
+.navbar {
+  font-family: 'Playfair Display', serif;
+  background-color: #1e3a5f;
+  color: #f9f6f1;
+
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  a {
+    color: #f9f6f1;
+    text-transform: none;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+}

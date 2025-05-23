@@ -1,0 +1,44 @@
+<section class="galeria-header">
+  <h1>Galería de Arte</h1>
+  <p>Explora nuestra colección de obras maestras de distintos períodos y artistas.</p>
+</section>
+
+<section class="galeria-filtros">
+  <mat-form-field appearance="outline" class="filtro">
+    <mat-label>Buscar</mat-label>
+    <input matInput [(ngModel)]="filtroTexto" placeholder="Título o autor">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="filtro">
+    <mat-label>Estilo</mat-label>
+    <mat-select [(ngModel)]="filtroEstilo">
+      <mat-option value="">Todos</mat-option>
+      <mat-option *ngFor="let estilo of estilosUnicos" [value]="estilo">{{ estilo }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</section>
+<section class="galeria-container">
+
+
+
+ <div class="pintura-card" *ngFor="let pintura of pinturasFiltradas">
+  <div class="imagen-wrapper">
+    <img
+      [src]="pintura.imagen"
+      [alt]="pintura.titulo"
+      class="imagen-pintura"
+      (error)="pintura.imagen = 'assets/pinturas/imagen-no-disponible.jpg'"
+    />
+  </div>
+  <div class="info">
+      <h3>{{ pintura.titulo }}</h3>
+      <p class="autor">{{ pintura.autor }} — {{ pintura.anio }}</p>
+      <p class="estilo">{{ pintura.estilo }}</p>
+      <button mat-button color="primary" (click)="verDetalle(pintura)">
+        <mat-icon>visibility</mat-icon> Ver detalle
+      </button>
+    </div>
+</div>
+
+</section>
+

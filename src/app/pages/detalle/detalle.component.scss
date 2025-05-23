@@ -1,0 +1,42 @@
+.detalle-container {
+  padding: 40px;
+
+  .volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #6a4caf;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .detalle-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+
+    .imagen-detalle {
+      max-width: 100%;
+      border-radius: 12px;
+      flex: 1 1 45%;
+    }
+
+    .detalle-info {
+      flex: 1 1 45%;
+
+      h1 {
+        font-size: 2rem;
+        color: #1e3a5f;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #333;
+      }
+
+      em {
+        color: #a02d3f;
+      }
+    }
+  }
+}
