@@ -1,0 +1,76 @@
+.horarios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 2rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 800px;
+  padding: 1.5rem;
+  border-left: 6px solid #a67c52;
+  background-color: #fffbe6;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  mat-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #5d4037;
+  }
+
+  mat-icon {
+    margin-right: 8px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.05rem;
+
+    td {
+      padding: 0.6rem;
+      vertical-align: top;
+      color: #4e342e;
+    }
+
+    td:first-child {
+      font-weight: 600;
+      width: 50%;
+    }
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slide {
+  animation: slideIn 1s ease forwards;
+}
+.custom-divider {
+  height: 2px;
+  background-color: #c0a672;
+  margin: 8px 0 16px;
+  width: 100%;
+  border-radius: 2px;
+}

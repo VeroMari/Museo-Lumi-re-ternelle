@@ -1,0 +1,43 @@
+<!-- collection-detail-dialog.component.html -->
+<div class="dialog-header">
+  <h1 mat-dialog-title>{{ data.title }}</h1>
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<div mat-dialog-content>
+  <div class="dialog-content">
+    <img [src]="data.image" [alt]="data.title" class="collection-image">
+    
+    <div class="collection-info">
+      <p class="description">{{ data.description }}</p>
+      
+      <div class="collection-meta">
+        <div class="meta-item">
+          <mat-icon>date_range</mat-icon>
+          <span>Periodo: {{ data.period }}</span>
+        </div>
+        <div class="meta-item">
+          <mat-icon>art_track</mat-icon>
+          <span>Obras en la colección: {{ data.numberOfItems }}</span>
+        </div>
+      </div>
+      
+      <h3>Obras destacadas:</h3>
+      <mat-list>
+        <mat-list-item *ngFor="let artwork of data.featuredArtworks">
+          <mat-icon mat-list-icon>brush</mat-icon>
+          <div mat-line>{{ artwork }}</div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cerrar</button>
+  <button mat-raised-button color="primary">
+    <mat-icon>visibility</mat-icon> Ver toda la colección
+  </button>
+</div>

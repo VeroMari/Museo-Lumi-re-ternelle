@@ -1,0 +1,97 @@
+.collections-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f5f5f5;
+  margin-bottom: 2rem;
+  
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #1e3a5f;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.collections-grid {
+  padding: 1rem;
+  
+  .collection-card {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    img {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #1e3a5f;
+      margin-bottom: 0.5rem;
+    }
+    
+    .period {
+      display: inline-block;
+      background-color: #837744;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.collection-dialog {
+  .mat-dialog-container {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+.collection-card {
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+background-color: #c7ab90;
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      color: #5f501e;
+    }
+
+    .card-info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .period {
+        background-color: #837744;
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+

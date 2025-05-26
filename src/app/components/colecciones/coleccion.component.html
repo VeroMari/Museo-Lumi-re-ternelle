@@ -1,0 +1,32 @@
+<!-- collections.component.html -->
+<section class="collections-header">
+  <h1>Nuestras Colecciones</h1>
+  <p>Explora las magníficas colecciones que alberga nuestro museo, cada una con su propia historia y significado.</p>
+</section>
+
+<section class="collections-grid">
+  <mat-grid-list cols="2" rowHeight="2:1" gutterSize="16px">
+    <mat-grid-tile *ngFor="let collection of collections">
+  <mat-card class="collection-card" (click)="openCollectionDetail(collection)">
+  <img mat-card-image [src]="collection.image" [alt]="collection.title" />
+
+  <!-- Mover card-header FUERA del mat-card-content -->
+  <div class="card-header">
+    <h2>{{ collection.title }}</h2>
+    <div class="card-info">
+      <span class="period">{{ collection.period }}</span>
+      <button mat-button color="primary" (click)="$event.stopPropagation(); openCollectionDetail(collection)">
+        <mat-icon>visibility</mat-icon> Ver colección
+      </button>
+    </div>
+  </div>
+
+  <mat-card-content>
+    <p>{{ collection.description }}</p>
+  </mat-card-content>
+</mat-card>
+
+
+    </mat-grid-tile>
+  </mat-grid-list>
+</section>

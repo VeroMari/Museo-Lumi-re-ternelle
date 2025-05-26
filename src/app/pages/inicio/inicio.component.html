@@ -1,34 +1,22 @@
-
-
-<section class="hero-carousel">
+<section class="hero-carousel hero-museo">
   <div class="slide" *ngFor="let pintura of obrasDestacadas; let i = index" [class.active]="i === activeSlide">
-    <img [src]="pintura.imagen" [alt]="pintura.titulo" class="hero-bg" />
+    <img [src]="pintura.imagen" alt="Imagen del museo" class="hero-bg" />
     <div class="hero-overlay">
       <h1>{{ pintura.titulo }}</h1>
-      <p>{{ pintura.autor }} — {{ pintura.anio }} — {{ pintura.estilo }}</p>
-      <button mat-raised-button color="primary">
-        <mat-icon>palette</mat-icon> Explore Collection
-      </button>
+      <p *ngIf="pintura.autor">{{ pintura.autor }}</p>
     </div>
   </div>
 </section>
-<section class="about-section">
-  <div class="about-wrapper">
-    <div class="about-content">
-      <h2>About Our Museum</h2>
-      <p>
-        Welcome to <strong>Lumière Éternelle</strong>, a virtual museum where art transcends
-        physical boundaries. Our platform brings together iconic masterpieces and emerging
-        gems, curated to inspire and educate through visual storytelling.
-      </p>
-      <p>
-        From Renaissance brilliance to modern expressions, we invite you to explore the
-        evolution of creativity, culture, and imagination—all from the comfort of your screen.
-      </p>
-      <button mat-stroked-button color="primary">
-        <mat-icon>info</mat-icon>
-        Learn more about us
-      </button>
-    </div>
+
+
+<section class="acceso-directo-section">
+  <div class="cards-container">
+    <mat-card class="card-acceso" *ngFor="let card of cards" (click)="navegar(card.ruta)">
+      <img mat-card-image [src]="card.imagen" alt="Imagen sección" />
+      <mat-card-content>
+        <h3 class="titulo-card">{{ card.titulo }}</h3>
+        <p class="descripcion-card">{{ card.descripcion }}</p>
+      </mat-card-content>
+    </mat-card>
   </div>
 </section>

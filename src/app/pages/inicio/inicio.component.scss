@@ -40,59 +40,59 @@
         font-size: 1.2rem;
         margin-bottom: 1rem;
       }
-
-      button {
-        font-size: 1rem;
-        display: inline-flex;
-        align-items: center;
-
-        mat-icon {
-          margin-right: 0.5rem;
-        }
-      }
-    }
-  }
-
-
-
-.about-section {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-
-  .about-wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2rem 1rem;
-    border-radius: 20px;
-    background: #f4f4f4;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  }
-
-  .about-content {
-    h2 {
-      font-size: 2.4rem;
-      margin-bottom: 1.2rem;
-      color: #333;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    button {
-      margin-top: 1rem;
-      font-weight: bold;
-      text-transform: none;
-
-      mat-icon {
-        margin-right: 0.5rem;
-      }
     }
   }
 }
 
+.acceso-directo-section {
+  padding: 2rem 1rem;
+  background-color: #f3f2ef;
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .card-acceso {
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    mat-card-content {
+      padding: 12px;
+      text-align: center;
+    }
+
+    .titulo-card {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #1e3a5f;
+      margin-bottom: 4px;
+    }
+
+    .descripcion-card {
+      font-size: 0.85rem;
+      color: #555;
+    }
+  }
 }

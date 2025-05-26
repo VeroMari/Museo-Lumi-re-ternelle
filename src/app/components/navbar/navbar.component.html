@@ -1,7 +1,24 @@
-<mat-toolbar color="primary" class="navbar">
-  <span class="brand">🎨 Lumière Éternelle</span>
-  <span class="spacer"></span>
-  <a mat-button routerLink="/">Inicio</a>
-  <a mat-button routerLink="/galeria">Galería</a>
-  <a mat-button routerLink="/acerca">Acerca del museo</a>
-</mat-toolbar>
+<div class="header-louvre">
+  <div class="top-row">
+    <div class="left-links">
+      <a mat-button routerLink="/" class="nav-link">Inicio</a>
+    </div>
+
+    <div class="brand">LUMIÈRE ÉTERNELLE</div>
+
+    <div class="right-links">
+      <a mat-button routerLink="/galeria" class="nav-link">Galería</a>
+      <a mat-button routerLink="/tienda" class="nav-link">Tienda</a>
+      <a mat-button routerLink="/entradas" class="nav-link">Entradas</a>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="bottom-row">
+    <a mat-button routerLink="/eventos" class="nav-link">Eventos y Exposiciones</a>
+    <a mat-button routerLink="/explorar" class="nav-link">Explorar</a>
+    <a mat-button routerLink="/horarios" class="nav-link">Horarios y precio</a>
+    <a mat-button routerLink="/educacion" class="nav-link">Aprende con nosotros</a>
+  </div>
+</div>

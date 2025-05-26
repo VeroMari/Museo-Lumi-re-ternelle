@@ -63,9 +63,6 @@ get estilosUnicos(): string[] {
   return [...new Set(this.pinturas.map(p => p.estilo))];
 }
 
-
-
-
 verDetalle(pintura: any) {
   this.router.navigate(['/pintura', pintura.id]);
 }
